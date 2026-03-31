@@ -22,6 +22,7 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { background:var(--black); color:var(--white); font-family:'Noto Serif JP',serif; overflow-x:hidden; }
+img { max-width: 100%; height: auto; }
 
 /* ===== HERO ===== */
 .hero {
@@ -848,6 +849,144 @@ body { padding-bottom:60px; }
 .group-message-era em {
   font-style: italic;
   color: var(--gold-light);
+}
+
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: 100svh;
+    padding-bottom: 36px;
+  }
+  .hero-photo,
+  .hero-overlay,
+  .hero-content,
+  .hero-photo.done,
+  .hero-overlay.done,
+  .hero-content.done {
+    position: absolute !important;
+  }
+  .hero-photo {
+    inset: 0;
+    min-height: 100svh;
+    background-position: center top;
+  }
+  .hero-overlay {
+    inset: 0;
+    min-height: 100svh;
+    background: rgba(0,0,0,0.45) !important;
+  }
+  .hero-content {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: none;
+    width: 100%;
+    padding: 120px 20px 110px;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+  .hero-badge,
+  .hero-h1,
+  .hero-desc,
+  .cta-primary,
+  .cta-note {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .hero-h1 {
+    font-size: clamp(28px, 9vw, 42px);
+    line-height: 1.3;
+  }
+  .hero-desc {
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 24px;
+  }
+  .cta-primary {
+    max-width: none;
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 13px;
+  }
+  .cta-note {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+  #heroVeneer,
+  .scroll-hint {
+    display: none !important;
+  }
+  .voice-top,
+  .intro-grid,
+  .veneer-grid,
+  .doctor-grid,
+  .flow-grid,
+  .access-grid,
+  .clinics-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .voice-born-logo {
+    width: min(84vw, 520px);
+  }
+  .after-grid {
+    grid-template-columns: 1fr;
+  }
+  .after-grid-sub {
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+  .veneer-inner,
+  .doctor-inner,
+  .gallery-inner,
+  .access-inner,
+  .voice-inner,
+  .intro-wrap,
+  .flow-inner,
+  .clinics-inner {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .sticky-cta {
+    padding: 10px 12px;
+  }
+  .sticky-cta a {
+    font-size: 12px;
+    padding: 14px 16px;
+    line-height: 1.5;
+  }
+  .cta-final-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 104px 16px 110px;
+  }
+  .hero-h1 {
+    font-size: 30px;
+  }
+  .hero-desc {
+    font-size: 12px;
+  }
+  .voice-born-logo {
+    width: min(88vw, 480px);
+  }
+  .after-grid-sub {
+    grid-template-columns: 1fr;
+  }
+  .section-title,
+  .cta-final-title {
+    line-height: 1.35;
+  }
 }
 
 </style>
