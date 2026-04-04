@@ -1607,6 +1607,35 @@ img, video, iframe, table { max-width: 100%; }
   .voice-card { padding: 18px 20px !important; font-size: 15px !important; }
 }
 
+
+/* Compare table premium redesign */
+.compare-table { border: 1px solid rgba(201,168,76,0.15) !important; border-radius: 4px; overflow: hidden; }
+.compare-table thead th { 
+  text-align: center !important; 
+  padding: 20px 16px !important;
+  background: rgba(201,168,76,0.08) !important;
+  border-bottom: 2px solid rgba(201,168,76,0.2) !important;
+}
+.compare-table td, .compare-table th { 
+  text-align: center !important; 
+  width: 33.33% !important;
+  padding: 22px 16px !important;
+  vertical-align: middle !important;
+}
+.compare-table .col-feature { 
+  text-align: center !important;
+  width: 33.33% !important;
+  background: rgba(255,255,255,0.02) !important;
+  font-size: clamp(14px,2.8vw,16px) !important;
+}
+.compare-table tbody tr {
+  border-bottom: 1px solid rgba(201,168,76,0.08) !important;
+}
+.compare-table tbody tr:last-child { border-bottom: none !important; }
+.compare-winner {
+  background: rgba(201,168,76,0.05) !important;
+}
+
 </style>
 
 <div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
