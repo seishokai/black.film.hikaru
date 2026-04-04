@@ -123,15 +123,16 @@ body { background:var(--black); color:var(--white); font-family:'Noto Serif JP',
 .section-eyebrow { font-family:'Montserrat',sans-serif; font-size:9px; letter-spacing:0.45em; color:var(--gold); margin-bottom:16px; display:block; }
 .section-title { font-family:'Cormorant Garamond',serif; font-size:clamp(26px,5.5vw,42px); font-weight:300; line-height:1.45; margin-bottom:24px; color:var(--off-white); }
 .gold-line { width:36px; height:1px; background:var(--gold); margin-bottom:28px; }
-.voice-cards { display:grid; grid-template-columns:1fr 1fr; gap:2px; }
+.voice-cards { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
 @media(max-width:480px){ .voice-cards{grid-template-columns:1fr;} }
 .voice-card {
-  background:var(--charcoal); padding:20px 24px;
-  font-size:clamp(13px,2.8vw,14px); font-weight:300; color:var(--text-body); line-height:1.8;
-  border-left:2px solid rgba(201,168,76,0.25);
-  transition:border-color 0.3s, background 0.3s;
+  background:var(--charcoal); padding:clamp(20px,4vw,32px) clamp(20px,4vw,28px);
+  font-size:clamp(14px,3vw,16px); font-weight:400; color:var(--off-white); line-height:1.8;
+  border-left:3px solid var(--gold);
+  transition:border-color 0.3s, background 0.3s, transform 0.3s;
+  text-align:center;
 }
-.voice-card:hover { border-left-color:var(--gold); background:#1c1c14; }
+.voice-card:hover { border-left-color:var(--gold-light); background:#1c1c14; transform:translateY(-2px); }
 .voice-card em { color:#ffffff; font-style:normal; font-weight:400; font-size:1em; }
 
 /* ===== INTRO ===== */
@@ -1545,6 +1546,16 @@ img, video, iframe, table { max-width: 100%; }
   }
 }
 
+
+.hero-photo {
+  animation: heroFadeIn 2s ease-out forwards;
+  opacity: 0;
+}
+@keyframes heroFadeIn {
+  0% { opacity: 0; filter: brightness(0.3); }
+  100% { opacity: 1; filter: brightness(1); }
+}
+
 </style>
 
 <div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
@@ -2345,7 +2356,7 @@ document.querySelectorAll('.ptab').forEach(btn => {
   function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
 
   let start = null;
-  const DUR = 1800;
+  const DUR = 2800;
 
   function animate(ts) {
     if (!start) start = ts;
@@ -2358,7 +2369,7 @@ document.querySelectorAll('.ptab').forEach(btn => {
   }
 
   window.addEventListener('load', function() {
-    setTimeout(function() { requestAnimationFrame(animate); }, 400);
+    setTimeout(function() { requestAnimationFrame(animate); }, 1500);
   });
 })();
 
