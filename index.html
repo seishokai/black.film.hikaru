@@ -1636,6 +1636,22 @@ img, video, iframe, table { max-width: 100%; }
   background: rgba(201,168,76,0.05) !important;
 }
 
+
+@media(max-width:768px) {
+  .hero-brand {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    opacity: 0.08 !important;
+    margin: -60px 0 -40px !important;
+    overflow: hidden !important;
+  }
+  .hero-brand span {
+    font-size: clamp(50px, 18vw, 100px) !important;
+  }
+}
+
 </style>
 
 <div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
@@ -1651,11 +1667,13 @@ img, video, iframe, table { max-width: 100%; }
   <div class="hero-photo" id="heroPhoto"></div>
   <div class="hero-teeth" id="heroTeeth"></div>
   <div class="hero-overlay" id="heroOverlay"></div>
+  <div class="hero-brand" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;text-align:center;pointer-events:none;opacity:0.12"><span style="font-family:'Cormorant Garamond',serif;font-size:clamp(80px,20vw,200px);font-weight:300;color:#fff;letter-spacing:0.15em;text-transform:uppercase;display:block;line-height:1">BLACK</span><span style="font-family:'Cormorant Garamond',serif;font-size:clamp(80px,20vw,200px);font-weight:300;color:#fff;letter-spacing:0.15em;text-transform:uppercase;display:block;line-height:0.9;font-style:italic">FILM</span></div>
   <p class="hero-photo-note">※ 掲載写真はヒカルさんではございません。モニター患者様の症例写真です。</p>
   <div class="hero-content" id="heroContent">
+    <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(11px,2.5vw,14px);letter-spacing:0.4em;color:rgba(201,168,76,0.7);display:block;margin-bottom:8px;text-transform:uppercase">THE NEW STANDARD OF BEAUTY</span>
     <span class="hero-badge">✦ 日本初上陸 — JAPAN EXCLUSIVE</span>
         <h1 class="hero-h1">歯を削らずに、<br><em>理想の白さと形を。</em></h1>
-    <p class="hero-desc">ヒカルが認めたBlackfilm。従来の治療概念を覆す最新審美歯科治療が日本初上陸。</p>
+    <p class="hero-desc">ヒカルが認めた<strong style="color:var(--gold-light)">Blackfilm</strong>。従来の治療概念を覆す最新審美歯科治療が日本初上陸。</p>
     <a href="https://reserve.shareconnect.co.jp/?r=7xb9ed&treatment_ids=1766627335021%2C1766627271947%2C1766627284554%2C1767579807369%2C1773880672347" class="cta-primary">無料カウンセリングを予約する →</a>
     <div class="hero-trust"><span class="trust-badge"><span class="trust-badge-icon">&#10003;</span> 歯を削らない</span><span class="trust-badge"><span class="trust-badge-icon">&#10003;</span> 痛みゼロ</span><span class="trust-badge"><span class="trust-badge-icon">&#10003;</span> 通院2回</span></div>
   </div>
