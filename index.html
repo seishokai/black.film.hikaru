@@ -1718,9 +1718,13 @@ img, video, iframe, table { max-width: 100%; }
 }
 
 
+
+
+
 @media(max-width:768px) {
-  .hero > div[style*='BLACKFILM'] {
-    display: none !important;
+  .hero > div[style*='BLACKFILM'] span {
+    font-size: clamp(30px, 10vw, 50px) !important;
+    letter-spacing: 0.15em !important;
   }
 }
 
