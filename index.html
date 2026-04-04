@@ -1151,7 +1151,7 @@ body { padding-bottom:60px; }
 .faq-q-icon{width:24px;height:24px;flex-shrink:0;margin-left:16px;position:relative}
 .faq-q-icon::before,.faq-q-icon::after{content:'';position:absolute;background:var(--gold);transition:transform 0.3s}
 .faq-q-icon::before{width:12px;height:1px;top:30%;left:50%;transform:translate(-50%,-50%)}
-.faq-q-icon::after{width:1px;height:12px;top:92%;left:50%;transform:translate(-50%,-50%)}
+.faq-q-icon::after{width:1px;height:12px;top:30%;left:50%;transform:translate(-50%,-50%)}
 .faq-item.open .faq-q-icon::after{transform:translate(-50%,-50%) rotate(90deg)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1),padding 0.4s}
 .faq-item.open .faq-a{max-height:300px;padding:0 0 22px 0}
@@ -1678,14 +1678,12 @@ img, video, iframe, table { max-width: 100%; }
 
 
 
+
+
+
 @media(min-width:769px) {
   .hero-content {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    margin-bottom: -120px !important;
-  }
-  .hero-brand {
-    margin-bottom: -120px !important;
+    padding: 0 clamp(24px,6vw,80px) clamp(60px,8vw,100px) !important;
   }
 }
 
