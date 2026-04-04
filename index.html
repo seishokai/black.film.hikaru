@@ -1150,7 +1150,7 @@ body { padding-bottom:60px; }
 .faq-q:hover{color:var(--gold-light)}
 .faq-q-icon{width:24px;height:24px;flex-shrink:0;margin-left:16px;position:relative}
 .faq-q-icon::before,.faq-q-icon::after{content:'';position:absolute;background:var(--gold);transition:transform 0.3s}
-.faq-q-icon::before{width:12px;height:1px;top:30%;left:50%;transform:translate(-50%,-50%)}
+.faq-q-icon::before{width:12px;height:1px;top:15%;left:50%;transform:translate(-50%,-50%)}
 .faq-q-icon::after{width:1px;height:12px;top:30%;left:50%;transform:translate(-50%,-50%)}
 .faq-item.open .faq-q-icon::after{transform:translate(-50%,-50%) rotate(90deg)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1),padding 0.4s}
@@ -1681,9 +1681,20 @@ img, video, iframe, table { max-width: 100%; }
 
 
 
+
+
+
+
+
+
 @media(min-width:769px) {
+  .hero {
+    justify-content: flex-end !important;
+  }
   .hero-content {
-    padding: 0 clamp(24px,6vw,80px) 20px !important; margin-bottom: -60px !important;
+    position: relative !important;
+    z-index: 3 !important;
+    padding: 0 clamp(24px,6vw,80px) clamp(30px,4vw,50px) !important;
   }
 }
 
