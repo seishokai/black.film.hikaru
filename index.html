@@ -1733,7 +1733,7 @@ img, video, iframe, table { max-width: 100%; }
 <div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
 <nav class="float-nav" id="floatNav"><div class="float-nav-inner">
 <span style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;letter-spacing:0.12em;color:var(--off-white)">BLACKFILM</span>
-<div class="float-nav-links"><a href="#about">特徴</a><a href="#technology">比較</a><a href="#doctors">医師</a><a href="#price">費用</a><a href="https://reserve.shareconnect.co.jp/?r=7xb9ed&treatment_ids=1766627335021%2C1766627271947%2C1766627284554%2C1767579807369%2C1773880672347" class="float-nav-cta">予約する</a></div>
+<div class="float-nav-links"><a href="#about">特徴</a><a href="#technology">比較</a><a href="#cases">症例</a><a href="#doctors">医師</a><a href="#price">費用</a><a href="https://reserve.shareconnect.co.jp/?r=7xb9ed&treatment_ids=1766627335021%2C1766627271947%2C1766627284554%2C1767579807369%2C1773880672347" class="float-nav-cta">予約する</a></div>
 </div></nav>
 <header class="site-header">
   <img class="header-logo" src="img/01.png" alt="Blackfilm">
@@ -2051,7 +2051,7 @@ img, video, iframe, table { max-width: 100%; }
       </div>
     </div>
 
-    <div class="cases-header reveal">
+    <div class="cases-header reveal" id="cases">
       <span class="section-eyebrow" style="margin-top:56px; display:block;">CLINICAL CASES</span>
       <h2 class="section-title">施術症例</h2>
       <div class="gold-line"></div>
@@ -2063,7 +2063,7 @@ img, video, iframe, table { max-width: 100%; }
         <span class="case-title-tag">変色・歯並びの改善</span>
       </div>
       <div class="case-img-wrap">
-        <img loading="lazy" src="img/13.jpg" alt="症例1 Before After">
+        <img loading="lazy" src="img/case01.jpg" alt="症例1 Before After">
         <span class="ba-tag">BEFORE / AFTER</span>
       </div>
       <p class="case-photo-note">※ モニター患者様の症例写真です。個人差があります。</p>
@@ -2082,7 +2082,12 @@ img, video, iframe, table { max-width: 100%; }
         <span class="case-title-tag">すきっ歯の改善</span>
       </div>
       <div class="case-img-wrap">
-        <img loading="lazy" src="img/14.jpg" alt="症例2 Before After">
+        <div class="case-img-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:4px">
+            <img loading="lazy" src="img/case02_before.jpg" alt="症例2 Before" style="width:100%">
+            <img loading="lazy" src="img/case02_after.jpg" alt="症例2 After" style="width:100%">
+            <img loading="lazy" src="img/case02_detail1.jpg" alt="症例2 詳細1" style="width:100%">
+            <img loading="lazy" src="img/case02_detail2.jpg" alt="症例2 詳細2" style="width:100%">
+          </div>
         <span class="ba-tag">BEFORE / AFTER</span>
       </div>
       <p class="case-photo-note">※ モニター患者様の症例写真です。個人差があります。</p>
@@ -2122,6 +2127,21 @@ img, video, iframe, table { max-width: 100%; }
     </div>
     </div>
 
+
+    <div class="case-block reveal">
+      <div class="case-header">
+        <span class="case-num">Case 03</span>
+        <span class="case-title-tag">矯正後のブラックトライアングル・審美改善</span>
+      </div>
+      <div class="case-img-wrap">
+        <div class="case-img-grid" style="display:grid;grid-template-columns:1fr;gap:4px">
+          <img loading="lazy" src="img/case03_1.jpg" alt="症例3 Before After" style="width:100%">
+          <img loading="lazy" src="img/case03_2.jpg" alt="症例3 詳細" style="width:100%">
+        </div>
+        <span class="ba-tag">BEFORE / AFTER</span>
+      </div>
+      <p class="case-photo-note">※ モニター患者様の症例写真です。個人差があります。</p>
+    </div>
     <p class="ba-photo-note">※ 掲載写真はすべて患者様の同意を得た実際の施術写真です。<br>施術の効果には個人差があります。<br>費用・リスクの詳細は無料カウンセリングにてご確認ください。</p>
 
   </div>
