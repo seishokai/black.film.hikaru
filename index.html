@@ -57,8 +57,8 @@ body { background:var(--black); color:var(--white); font-family:'Noto Serif JP',
   );
 }
 .hero-content {
-  position:absolute; bottom:-80px; left:0; right:0; z-index:3;
-  padding: 0 clamp(24px,6vw,80px) 40px;
+  position:relative; z-index:3;
+  padding: clamp(24px,4vw,48px) clamp(24px,6vw,80px) clamp(40px,6vw,64px);
   max-width: 720px;
 }
 .hero-badge {
@@ -1683,17 +1683,37 @@ img, video, iframe, table { max-width: 100%; }
 
 
 
-/* FINAL PC HERO FIX */
+
+
+
+/* ===== HERO FINAL FIX ===== */
+.hero {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+}
+
+/* PC: text overlaps slightly into the area below the image */
 @media(min-width:769px) {
   .hero-content {
-    position: absolute !important;
-    bottom: -80px !important;
-    left: 0 !important;
-    right: 0 !important;
+    position: relative !important;
     z-index: 3 !important;
-    padding: 0 80px 40px !important;
+    padding: 0 clamp(24px,6vw,80px) clamp(20px,3vw,40px) !important;
     max-width: 720px !important;
     background: transparent !important;
+    margin-bottom: -40px !important;
+  }
+}
+
+/* Mobile: text below image on black bg */
+@media(max-width:768px) {
+  .hero-content {
+    position: relative !important;
+    z-index: 3 !important;
+    padding: 16px 16px 8px !important;
+    max-width: 100% !important;
+    background: var(--black) !important;
+    margin-bottom: 0 !important;
   }
 }
 
@@ -1719,7 +1739,7 @@ img, video, iframe, table { max-width: 100%; }
 <div style="position:absolute;top:35%;left:50%;transform:translate(-50%,-50%);z-index:2;text-align:center;pointer-events:none">
   <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(50px,10vh,140px);font-weight:300;color:rgba(255,255,255,0.5);letter-spacing:0.25em;text-transform:uppercase">BLACKFILM</span>
 </div>
-<p style="position:absolute;bottom:8px;right:12px;z-index:4;font-size:8px;color:rgba(255,255,255,0.3);margin:0">※ 掲載写真はヒカルさんではございません。モニター患者様の症例写真です。</p>
+
 
   <div class="hero-content" id="heroContent">
     
@@ -1728,6 +1748,7 @@ img, video, iframe, table { max-width: 100%; }
     <p class="hero-desc">ヒカルが認めたBlackfilm。最新審美歯科治療が日本初上陸。</p>
     <a href="https://reserve.shareconnect.co.jp/?r=7xb9ed&treatment_ids=1766627335021%2C1766627271947%2C1766627284554%2C1767579807369%2C1773880672347" class="cta-primary">無料カウンセリングを予約する →</a>
     <div class="hero-trust"><span class="trust-badge"><span class="trust-badge-icon">&#10003;</span> 歯を削らない</span><span class="trust-badge"><span class="trust-badge-icon">&#10003;</span> 痛みゼロ</span><span class="trust-badge"><span class="trust-badge-icon">&#10003;</span> 通院2回</span></div>
+  <p style="font-size:9px;color:rgba(255,255,255,0.35);margin-top:8px">※ 掲載写真はヒカルさんではございません。モニター患者様の症例写真です。</p>
   </div>
   <div class="scroll-hint" id="scrollHint">
     <div class="scroll-line"></div>
