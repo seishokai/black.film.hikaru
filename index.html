@@ -347,7 +347,7 @@ body { padding-bottom:60px; }
 /* done classes not needed - already absolute */
 .hero-photo-note {
   position: absolute;
-  bottom: 12px; right: 16px;
+  bottom: 2px; right: 6px;
   z-index: 6;
   font-size: 10px;
   color: rgba(255,255,255,0.5);
@@ -1150,8 +1150,8 @@ body { padding-bottom:60px; }
 .faq-q:hover{color:var(--gold-light)}
 .faq-q-icon{width:24px;height:24px;flex-shrink:0;margin-left:16px;position:relative}
 .faq-q-icon::before,.faq-q-icon::after{content:'';position:absolute;background:var(--gold);transition:transform 0.3s}
-.faq-q-icon::before{width:12px;height:1px;top:50%;left:50%;transform:translate(-50%,-50%)}
-.faq-q-icon::after{width:1px;height:12px;top:50%;left:50%;transform:translate(-50%,-50%)}
+.faq-q-icon::before{width:12px;height:1px;top:30%;left:50%;transform:translate(-50%,-50%)}
+.faq-q-icon::after{width:1px;height:12px;top:40%;left:50%;transform:translate(-50%,-50%)}
 .faq-item.open .faq-q-icon::after{transform:translate(-50%,-50%) rotate(90deg)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1),padding 0.4s}
 .faq-item.open .faq-a{max-height:300px;padding:0 0 22px 0}
@@ -1643,12 +1643,34 @@ img, video, iframe, table { max-width: 100%; }
     top: auto !important;
     left: auto !important;
     transform: none !important;
-    opacity: 0.08 !important;
+    opacity: 0.5 !important;
     margin: -60px 0 -40px !important;
     overflow: hidden !important;
   }
   .hero-brand span {
-    font-size: clamp(50px, 18vw, 100px) !important;
+    font-size: clamp(28px, 10vw, 60px) !important;
+  }
+}
+
+
+.hero-photo-note {
+  font-size: 7px !important;
+  background: transparent !important;
+  padding: 0 !important;
+  z-index: 4 !important;
+  color: rgba(255,255,255,0.35) !important;
+  left: auto !important;
+  text-align: right !important;
+}
+@media(max-width:768px) {
+  .hero-photo-note {
+    position: relative !important;
+    bottom: auto !important;
+    right: auto !important;
+    text-align: right !important;
+    font-size: 8px !important;
+    padding: 2px 8px !important;
+    background: rgba(0,0,0,0.3) !important;
   }
 }
 
@@ -1667,10 +1689,11 @@ img, video, iframe, table { max-width: 100%; }
   <div class="hero-photo" id="heroPhoto"></div>
   <div class="hero-teeth" id="heroTeeth"></div>
   <div class="hero-overlay" id="heroOverlay"></div>
-  <div class="hero-brand" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;text-align:center;pointer-events:none;opacity:0.12"><span style="font-family:'Cormorant Garamond',serif;font-size:clamp(80px,20vw,200px);font-weight:300;color:#fff;letter-spacing:0.15em;text-transform:uppercase;display:block;line-height:1">BLACK</span><span style="font-family:'Cormorant Garamond',serif;font-size:clamp(80px,20vw,200px);font-weight:300;color:#fff;letter-spacing:0.15em;text-transform:uppercase;display:block;line-height:0.9;font-style:italic">FILM</span></div>
-  <p class="hero-photo-note">※ 掲載写真はヒカルさんではございません。モニター患者様の症例写真です。</p>
+  <div class="hero-brand" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;text-align:center;pointer-events:none;opacity:0.55"><span style="font-family:'Cormorant Garamond',serif;font-size:clamp(40px,8vh,120px);font-weight:300;color:#fff;letter-spacing:0.25em;text-transform:uppercase;display:block;line-height:1">BLACKFILM</span></div>
+  
   <div class="hero-content" id="heroContent">
     <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(11px,2.5vw,14px);letter-spacing:0.4em;color:rgba(201,168,76,0.7);display:block;margin-bottom:8px;text-transform:uppercase">THE NEW STANDARD OF BEAUTY</span>
+    <p style="font-size:7px;color:rgba(255,255,255,0.3);margin-top:4px;text-align:center">※ 掲載写真はヒカルさんではございません。モニター患者様の症例写真です。</p>
     <span class="hero-badge">✦ 日本初上陸 — JAPAN EXCLUSIVE</span>
         <h1 class="hero-h1">歯を削らずに、<br><em>理想の白さと形を。</em></h1>
     <p class="hero-desc">ヒカルが認めた<strong style="color:var(--gold-light)">Blackfilm</strong>。従来の治療概念を覆す最新審美歯科治療が日本初上陸。</p>
