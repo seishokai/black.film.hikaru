@@ -495,6 +495,46 @@ body { padding-bottom:60px; }
   font-weight: 300; font-family: 'Noto Serif JP', serif;
 }
 
+/* ===== PRICING - 料金表ライトモード ===== */
+.price-section { background: #faf7ee; border-top: 1px solid rgba(201,168,76,0.4); border-bottom: 1px solid rgba(201,168,76,0.4); }
+.price-section .section-title { color: #1a1a1a; }
+.price-section .price-intro-text { color: #3a3530; }
+.price-section .price-regular-box { background: #ffffff; border: 1px solid rgba(201,168,76,0.4); }
+.price-section .price-regular-label { color: #6a4a0a; }
+.price-section .price-regular-val { color: #1a1a1a; }
+.price-section .price-per { color: #6a5a3a; }
+.price-section .price-regular-tax { color: #5a4a3a; }
+.price-section .ptab { background: #ffffff; border: 1px solid rgba(201,168,76,0.35); color: #6a5a3a; }
+.price-section .ptab:hover { color: #5a3a0a; border-color: rgba(201,168,76,0.6); }
+.price-section .ptab.active { background: linear-gradient(135deg, #c9a84c, #e8c97a); border-color: #c9a84c; color: #1a1a1a; }
+.price-section .ptab[data-tab="face"] { background: rgba(220,120,80,0.08) !important; border-color: rgba(220,120,80,0.5) !important; color: #8a3a1a !important; }
+.price-section .ptab[data-tab="face"].active { background: linear-gradient(135deg, #d06038, #e8956b) !important; border-color: #d06038 !important; color: #ffffff !important; }
+.price-section .ptable-head { background: #fff5e0; border: 1px solid rgba(201,168,76,0.4); border-bottom: none; }
+.price-section .ptable-desc { color: #3a3530; }
+.price-section .ptable-badge.set { background: rgba(201,168,76,0.2); color: #6a4a0a; border: 1px solid rgba(201,168,76,0.6); }
+.price-section .ptable-badge.nose { background: rgba(60,140,80,0.15); color: #2a6a3a; border: 1px solid rgba(60,140,80,0.5); }
+.price-section .ptable-badge.face { background: rgba(220,120,80,0.18); color: #8a3a1a; border: 1px solid rgba(220,120,80,0.6); }
+.price-section .ptable { background: #ffffff; border: 1px solid rgba(201,168,76,0.4); }
+.price-section .ptable thead tr { background: #f5e8c0; }
+.price-section .ptable th { color: #5a3f0a; border-bottom: 1px solid rgba(201,168,76,0.5); }
+.price-section .ptable th small { color: #7a6a5a; }
+.price-section .ptable tbody tr { border-bottom: 1px solid rgba(0,0,0,0.08); }
+.price-section .ptable tbody tr:nth-child(even) { background: #faf7ee; }
+.price-section .ptable tbody tr:hover { background: rgba(201,168,76,0.15); }
+.price-section .ptable td { color: #2a2520; }
+.price-section .price-col { color: #6a4a0a !important; }
+.price-section .tax-in { color: #7a6a5a !important; }
+.price-section .disc-col { color: #5a4a3a !important; }
+.price-section .disc-col.best { color: #2a6a3a !important; font-weight: 600 !important; }
+.price-section .total-col { color: #1a1a1a !important; font-weight: 500 !important; }
+.price-section .loan-col { color: #2a6a3a !important; }
+.price-section .loan-col .tax-in { color: #4a8a5a !important; }
+.price-section .price-footnote { background: #ffffff; border: 1px solid rgba(201,168,76,0.25); }
+.price-section .price-footnote p { color: #3a3530; }
+.price-section .risk-box { background: #fff5e0; border: 1px solid rgba(201,168,76,0.4); }
+.price-section .risk-title { color: #6a4a0a; }
+.price-section .risk-text { color: #3a3530; }
+
 .guideline-notice {
   background: rgba(201,168,76,0.06);
   border: 1px solid rgba(201,168,76,0.2);
@@ -2270,7 +2310,7 @@ img, video, iframe, table { max-width: 100%; }
     <div class="price-tabs reveal">
       <button class="ptab active" data-tab="set">本数セット価格</button>
       <button class="ptab" data-tab="nose">鼻下モニター価格</button>
-      <button class="ptab" data-tab="face" style="border-color:rgba(220,120,80,0.6);color:#ffb898;background:rgba(220,120,80,0.12)">顔全体モニター価格</button>
+      <button class="ptab" data-tab="face">顔全体モニター価格</button>
     </div>
 
     <div class="price-table-wrap reveal" id="tab-set">
@@ -2370,26 +2410,26 @@ img, video, iframe, table { max-width: 100%; }
     </div>
 
     
-<div class="dental-loan-box reveal" style="margin-top:40px;background:var(--charcoal);border:1px solid rgba(100,180,120,0.25);padding:clamp(28px,4vw,40px) clamp(24px,4vw,36px)">
+<div class="dental-loan-box reveal" style="margin-top:40px;background:#ffffff;border:1px solid rgba(60,140,80,0.4);padding:clamp(28px,4vw,40px) clamp(24px,4vw,36px)">
   <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
-    <span style="font-family:'Noto Serif JP',serif;font-size:clamp(18px,3vw,22px);color:var(--off-white);font-weight:400">デンタルローンのご案内</span>
+    <span style="font-family:'Noto Serif JP',serif;font-size:clamp(18px,3vw,22px);color:#1a1a1a;font-weight:400">デンタルローンのご案内</span>
   </div>
-  <p style="font-size:clamp(14px,2.5vw,15px);line-height:2.2;color:var(--text-body);font-weight:300;margin-bottom:16px">月々のお支払いで、無理なく理想の歯を手に入れることができます。以下の提携ローン会社をご利用いただけます。</p>
+  <p style="font-size:clamp(14px,2.5vw,15px);line-height:2.2;color:#3a3530;font-weight:300;margin-bottom:16px">月々のお支払いで、無理なく理想の歯を手に入れることができます。以下の提携ローン会社をご利用いただけます。</p>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:20px">
-    <div style="background:rgba(100,180,120,0.08);border:1px solid rgba(100,180,120,0.2);padding:20px;text-align:center">
-      <span style="font-size:11px;color:var(--text-muted);display:block;margin-bottom:6px">金利</span>
-      <span style="font-family:'Cormorant Garamond',serif;font-size:32px;color:#a0e0b0;font-weight:300">3.4〜5.5</span><span style="font-size:16px;color:#a0e0b0">%</span>
+    <div style="background:rgba(60,140,80,0.06);border:1px solid rgba(60,140,80,0.3);padding:20px;text-align:center">
+      <span style="font-size:11px;color:#6a5a4a;display:block;margin-bottom:6px">金利</span>
+      <span style="font-family:'Cormorant Garamond',serif;font-size:32px;color:#2a6a3a;font-weight:400">3.4〜5.5</span><span style="font-size:16px;color:#2a6a3a">%</span>
     </div>
-    <div style="background:rgba(100,180,120,0.08);border:1px solid rgba(100,180,120,0.2);padding:20px;text-align:center">
-      <span style="font-size:11px;color:var(--text-muted);display:block;margin-bottom:6px">お支払い回数</span>
-      <span style="font-family:'Cormorant Garamond',serif;font-size:36px;color:#a0e0b0;font-weight:300">120</span><span style="font-size:16px;color:#a0e0b0">回</span>
+    <div style="background:rgba(60,140,80,0.06);border:1px solid rgba(60,140,80,0.3);padding:20px;text-align:center">
+      <span style="font-size:11px;color:#6a5a4a;display:block;margin-bottom:6px">お支払い回数</span>
+      <span style="font-family:'Cormorant Garamond',serif;font-size:36px;color:#2a6a3a;font-weight:400">120</span><span style="font-size:16px;color:#2a6a3a">回</span>
     </div>
-    <div style="background:rgba(100,180,120,0.08);border:1px solid rgba(100,180,120,0.2);padding:20px;text-align:center">
-      <span style="font-size:11px;color:var(--text-muted);display:block;margin-bottom:6px">対応金融機関</span>
-      <span style="font-size:18px;color:var(--off-white);font-weight:300">スルガ銀行</span>
+    <div style="background:rgba(60,140,80,0.06);border:1px solid rgba(60,140,80,0.3);padding:20px;text-align:center">
+      <span style="font-size:11px;color:#6a5a4a;display:block;margin-bottom:6px">対応金融機関</span>
+      <span style="font-size:18px;color:#1a1a1a;font-weight:400">スルガ銀行</span>
     </div>
   </div>
-  <p style="font-size:12px;color:var(--text-muted);line-height:2">※ 審査結果によって金利が変動いたします。<br>※ 上記月額は金利 3.4%〜5.5%（スルガ銀行）・120回払いでの概算です。詳細はカウンセリング時にご確認ください。</p>
+  <p style="font-size:12px;color:#6a5a4a;line-height:2">※ 審査結果によって金利が変動いたします。<br>※ 上記月額は金利 3.4%〜5.5%（スルガ銀行）・120回払いでの概算です。詳細はカウンセリング時にご確認ください。</p>
 </div>
 
     <div class="risk-box reveal">
